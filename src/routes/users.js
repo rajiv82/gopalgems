@@ -13,6 +13,10 @@ router.post("/users/new", async (req, res) => {
   }
 });
 
+router.get("/",(req,res)=>{
+    res.send("Hello World")
+})
+
 router.post("/users/login", async (req,res)=>{
     try{
         const user = await User.checkCredentials(req.body.user,req.body.password)
